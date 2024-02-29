@@ -1,11 +1,11 @@
 Package: GibbsSamplerCaba0009
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Random Sample from Bivariate Normal Distribution
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Tanner Cabaniss
+Maintainer: Tanner Cabaniss <cabanisstanner@gmail.com>
+Description: This package contains some functions to derive a random sample from a bivariate normal distribution and
+    display those results in a shiny app.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
