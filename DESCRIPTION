@@ -9,3 +9,10 @@ Description: This package contains some functions to derive a random sample from
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 7.3.0
+Suggests: 
+    knitr,
+    rmarkdown,
+    shiny,
+    ggplot2
+VignetteBuilder: knitr

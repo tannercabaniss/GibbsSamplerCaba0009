@@ -1,0 +1,32 @@
+---
+title: "GibbsSampler"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{GibbsSampler}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup, echo=FALSE}
+library(GibbsSamplerCaba0009)
+```
+
+# Introduction
+This is the vignette for the GIBBS sampler package. This package contains two functions. The rbvnorm function generates a random sample from a bivariate normal distribution based on provided mean and variance values as well as an iteration value which determines the number of samples drawn from the distribution. The other function, shinyplot, runs a shiny app that will display sampled data in a scatter/contour plot as well as in a heatmap.
+
+# Shiny App
+The shiny app uses the ggplot2 library to build relevant plots to display the data from the GIBBS sampler appropriately. There are protections built into the app to prevent unsolvable distributions being used. However, these may take a little to update in certain cases so be patient and allow the app to fix itself. To run the shiny app, please call the following command from the console: shinyplot()
+
+# Tail of GIBBS sample
+We were asked to the generate the tail of a certain bivariate distribution as provided. The last 10 rows of the random sample are shown below. As no initial value was provided, the default 0 was used.
+```{r, echo=FALSE}
+result <- rbvnorm(iter = 10000, mu = c(3, 6), sigma = matrix(c(8, -2, -2, 4), nrow = 2, byrow = TRUE))
+tail(result$gibbs, 10)
+```
